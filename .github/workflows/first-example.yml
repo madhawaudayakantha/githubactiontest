@@ -15,9 +15,6 @@ jobs:
           ls -lrt
           cat README.md
 
-      - name: Generate ascii content
-        run: cowsay -f dragon "Run for cover" >> dragon.txt
-
     #   - name: list files
     #     run: ls
 
