@@ -6,6 +6,9 @@ jobs:
   test_job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - name: Welcome msg
         run: echo "My test github action"
 
