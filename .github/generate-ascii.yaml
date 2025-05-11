@@ -1,0 +1,28 @@
+name: Generate Ascii flow
+
+on: push
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install cowsay library
+        run: sudo apt-get install cowsay -y
+
+      - name: Generate ascii content
+        run: cowsay -f dragon "Run for cover" >> dragon.txt
+
+      - name: Read dragon file
+        run: |
+          grep -i 'dragon' dragon.txt
+          cat dragon.txt
+          ls -lrt
+
+    #   - name: list files
+    #     run: ls
+
+    #   - name: Read file
+    #     run: cat README.md
