@@ -3,7 +3,7 @@ name: Generate Ascii flow
 on: push
 
 jobs:
-  test_job:
+  ascii_job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
